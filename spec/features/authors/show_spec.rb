@@ -25,7 +25,7 @@ RSpec.describe "Author Show" do
           expect(page).to have_content(@stephen_k.name)
           expect(page).to have_content(@talisman.title)
           expect(page).to have_content(@it.title)
-          expect(page).to have_content("1030")
+          expect(page).to have_content("1029")
         end
 
         visit books_path
