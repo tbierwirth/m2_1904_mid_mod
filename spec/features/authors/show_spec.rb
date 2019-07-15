@@ -35,9 +35,9 @@ RSpec.describe "Author Show" do
         expect(page).to have_content(@peter_s.name)
         expect(page).to have_content(@talisman.title)
         expect(page).to have_content("921")
-        end
 
       end
+    end
   end
 
 end
