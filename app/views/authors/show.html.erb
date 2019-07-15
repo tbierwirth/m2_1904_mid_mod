@@ -1,3 +1,4 @@
+<section id="author-<%= @author.id %>">
 <h2><%= @author.name %></h2>
 <p>Book(s) Written:</p>
 <ul>
@@ -5,3 +6,5 @@
   <li><%= book.title %></li>
 <% end %>
 </ul>
+<p>Average Number of Pages: <%= @author.average_pages %></p>
+</section>
