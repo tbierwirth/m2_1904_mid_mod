@@ -5,7 +5,7 @@
     <p>Pages: <%= book.pages %></p>
     <p>Publication Year: <%= book.publication_year %></p>
     <p>Author(s): <% book.authors.each do |author| %>
-      <%= author.name %>
+      <%= link_to author.name, "/authors/#{author.id}" %>
     <% end %></p>
   </section>
 <% end %>
