@@ -16,12 +16,14 @@ RSpec.describe "Author Show" do
       it "I can click each authors name to see their show page with their info" do
         visit books_path
 
-        click_link "Stephen King"
-        expect(current_path).to eq("/author/#{@stephen_k.id}")
-        expect(page).to have_content(@stephen_k.name)
-        expect(page).to have_content(@talisman.title)
-        expect(page).to have_content(@it.title)
-        expect(page).to have_content("1030")
+        within "#book-#{@talisman.id}" do
+          click_link "Stephen King"
+          expect(current_path).to eq("/author/#{@stephen_k.id}")
+          expect(page).to have_content(@stephen_k.name)
+          expect(page).to have_content(@talisman.title)
+          expect(page).to have_content(@it.title)
+          expect(page).to have_content("1030")
+        end
 
         visit books_path
 
